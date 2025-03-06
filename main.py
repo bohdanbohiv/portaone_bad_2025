@@ -37,7 +37,7 @@ class PrefixMap(tuple):
             cp[i].extend(self[i])
         return cp
 
-    def __iter__(self):
+    def __iter__(self) -> Iterator[str]:
         for l in super().__iter__():
             for n in l:
                 yield n
